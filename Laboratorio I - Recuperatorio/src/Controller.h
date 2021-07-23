@@ -14,7 +14,7 @@ int Controller_List_Books(LinkedList*, LinkedList*);
 //--------------------------------------------------//
 
 int Controller_Filter_Books(LinkedList*, LinkedList*, int(*pCriterio)(void*));
-int Controller_Count_Books(LinkedList*, LinkedList*, int(*pCriterio)(void*));
+int Controller_Count_Books(LinkedList*, int(*pCriterio)(void*));
 
 //--------------------------------------------------//
 

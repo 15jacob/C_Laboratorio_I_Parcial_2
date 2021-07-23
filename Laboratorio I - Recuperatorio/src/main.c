@@ -211,7 +211,7 @@ int main()
 
 					case 5:
 						pCriterio = book_isPhilipDick;
-						respuesta = Controller_Count_Books(listaLibros, listaFiltradaAnho, pCriterio);
+						respuesta = Controller_Count_Books(listaLibros, pCriterio);
 						new_line();
 
 						switch(respuesta)
@@ -234,7 +234,7 @@ int main()
 
 					case 6:
 						pCriterio = book_isNotSpanish;
-						respuesta = Controller_Count_Books(listaLibros, listaFiltradaAnho, pCriterio);
+						respuesta = Controller_Count_Books(listaLibros, pCriterio);
 						new_line();
 
 						switch(respuesta)

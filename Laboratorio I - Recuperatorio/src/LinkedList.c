@@ -581,7 +581,7 @@ int ll_containsAll(LinkedList* this,LinkedList* this2)
 */
 LinkedList* ll_subList(LinkedList* this, int from, int to)
 {
-    LinkedList* clontedList = NULL;
+    LinkedList* clonedList = NULL;
     void* pElementoAuxiliar;
 
     int len;
@@ -592,10 +592,10 @@ LinkedList* ll_subList(LinkedList* this, int from, int to)
     if(this != NULL && from >= 0 && to <= len && from < to)
     {
     	//Creo espacio en memoria dinamica para la lista
-    	clontedList = ll_newLinkedList();
+    	clonedList = ll_newLinkedList();
 
     	//Si se pudo encontrar espacio
-    	if(clontedList != NULL)
+    	if(clonedList != NULL)
     	{
     		//Recorro el espacio entre las posiciones indicadas
 			for(i = from; i < to; i++)
@@ -604,12 +604,12 @@ LinkedList* ll_subList(LinkedList* this, int from, int to)
 				pElementoAuxiliar = ll_get(this, i);
 
 				//Coloco ese elemento dentro de un nuevo nodo en mi sublista
-				ll_add(clontedList, pElementoAuxiliar);
+				ll_add(clonedList, pElementoAuxiliar);
 			}
     	}
     }
 
-    return clontedList;
+    return clonedList;
 }
 
 /** \brief Crea y retorna una nueva lista con los elementos de la lista pasada como parametro
@@ -620,7 +620,7 @@ LinkedList* ll_subList(LinkedList* this, int from, int to)
 */
 LinkedList* ll_clone(LinkedList* this)
 {
-    LinkedList* clontedList = NULL;
+    LinkedList* clonedList = NULL;
 
     int len;
     len = ll_len(this);
@@ -628,10 +628,10 @@ LinkedList* ll_clone(LinkedList* this)
     if(this != NULL)
     {
     	//Llamo a la funcion sublist para que clone desde la posicion 0 hasta la ultima
-    	clontedList = ll_subList(this, 0, len);
+    	clonedList = ll_subList(this, 0, len);
     }
 
-    return clontedList;
+    return clonedList;
 }
 
 /** \brief Ordena los elementos de la lista utilizando la funcion criterio recibida como parametro

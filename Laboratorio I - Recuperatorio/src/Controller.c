@@ -131,7 +131,7 @@ int Controller_Filter_Books(LinkedList* pListBooks, LinkedList* pListFiltered, i
  * @param pCriterio
  * @return
  */
-int Controller_Count_Books(LinkedList* pListBooks, LinkedList* pListFiltered, int(*pCriterio)(void*))
+int Controller_Count_Books(LinkedList* pListBooks, int(*pCriterio)(void*))
 {
 	int respuesta;
 	respuesta = -1;
